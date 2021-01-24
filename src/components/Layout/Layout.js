@@ -2,15 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Layout.module.css';
 
-function Layout({ children, title }) {
+function Layout({ children}) {
     return (
-        <>
             <div className={styles.layout} >
                 <h1> </h1>
-                {title && <h2>{title}</h2>}
                 {children}
-            </div>
-        </>);
+            </div>)
 }
 
 Layout.defaultProps = {

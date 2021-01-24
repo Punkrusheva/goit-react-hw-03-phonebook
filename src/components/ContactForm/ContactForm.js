@@ -28,6 +28,8 @@ class ContactForm extends Component {
 
   render() {
     return (
+      <>
+        <h2>Phonebook</h2>
       <form className={styles.box} onSubmit={this.handleSubmit} >
         <label htmlFor={this.nameInputId} className={styles.name}>
           Name
@@ -54,7 +56,8 @@ class ContactForm extends Component {
         <button type='submit' className={styles.button}>
           Add contact
             </button>
-      </form>
+        </form>
+        </>
     );
   }
 }

@@ -87,23 +87,23 @@ export default class App extends Component {
 
 
     return (
-      <>
-        <Layout title="Phonebook">
+        <Layout >
           <ContactForm
             onSubmit={this.formSubmitHandler}
          />
-        </Layout>
 
-        {contacts.length > 0 && (<Layout title="Contacts">
-          <ContactFilter
-            onChange={this.changeFilter}
-            value={filter}
-          ></ContactFilter>
-          <ContactList
-            onRemoveContact={this.removeContact}
-            contacts={visibleContacts} />
-        </Layout>)}
-      </>
+          {contacts.length > 0 &&
+            <>
+            <ContactFilter
+              onChange={this.changeFilter}
+              value={filter}>
+            </ContactFilter>  
+          
+            <ContactList
+              onRemoveContact={this.removeContact}
+              contacts={visibleContacts} />
+            </>}
+        </Layout>
     )
   }
 }
